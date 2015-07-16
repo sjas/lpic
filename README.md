@@ -38,6 +38,26 @@ $ less test.md
 $ head -5 test.md # shows 5 heading lines of test.md
 $ tail -3 test.md # shows 3 bottom lines of test.md
 
+#copy
+$ cp -i test.md tmp # overwrites with confirmation
+$ cp -i test.md tmp # overwrites without confirmation
+$ cp -r tmp tmp2 # copy directory
+
+# move/rename
+$ mv -i data.txt tmp # overwrites with confirmation
+$ mv -f data.txt tmp # overwrites without confirmation
+$ mv tmpdir mydir # -r is not necessary for moving directory like `rm` or `cp` commands
+
+# remove
+$ rm -i data.txt # removes with confirmation
+$ rm -f data.txt # removes without confirmation
+$ rm -r tmp # removes directory(even when the directory is NOT empty)
+$ rm -R tmp # removes directory(same with -r option)
+$ rmdir tmp # `rmdir` also removes EMPTY files
+
+# create directory
+$ mkdir -p tmp/tmp2 # parents directory will be also created
+$ mkdir -m 705 mydir # creates directory with set permissions
 
 
 ```
