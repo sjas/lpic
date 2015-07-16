@@ -61,3 +61,27 @@ $ mkdir -m 705 mydir # creates directory with set permissions
 
 
 ```
+
+## Hard link / Symbolic link
+
+```bash
+
+# shows hardlinks
+$ ls -i1 # with `-i` options, `ls` shows index node(i node)
+
+# creates hardlinks
+$ touch test.txt # creates test.txt
+$ ln test.txt test.hard # creates hardlink of test.txt
+$ ls -i1 # check that i node of test.txt equals with test.hard
+
+```
+
+## Useful tips
+
+```bash
+# {}
+# the first command is equals with the second one
+$ touch test{1,2,3}.mdi
+$ touch test1.md test2.md test3.md
+
+```
