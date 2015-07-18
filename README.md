@@ -62,6 +62,132 @@ $ mkdir -m 705 mydir # creates directory with set permissions
 
 ```
 
+## Count / Sort
+
+```bash
+
+# count
+$ ls -l | tee count.txt | wc # creates result file and show the wc result
+$ wc -c count.txt # shows only bytes count
+$ wc -l count.txt # shows only lines count
+$ wc -w count.txt # shows only words count
+
+# sort
+$ ls -l | sort # sorts by alphabetic order
+$ ls -l | sort -b # sorts ignoring spaces in the opening sentence
+$ ls -l | sort -f # sorts ignoring Small/Capital
+$ ls -l | sort -r # sorts in reverse way
+$ ls -l | sort -n # sorts number not as a string but as a number
+
+```
+
+## Search
+
+### Locate
+
+```bash
+
+# `locate` commands search based on database
+# therefore it is faster than `find` command
+$ locate sort
+
+# to update database
+# * this is usually executed regularly
+$ updatedb
+
+```
+
+### Find
+
+#### Option
+
+```bash
+
+# `maxdepth` otption defines the depth of search target
+$ find . -name "README.md" -maxdepth 1
+
+```
+
+#### Condition
+
+```bash
+
+# Basic
+# find [targetDirectory] [option]
+
+# By name
+$ find . -name "README.md"
+
+# By size
+$ find . -size 1k 		# file size = 1k byte
+$ find . -size +100c 	# file size > 100 byte
+$ find . -size +1k 		# file size > 1k byte
+$ find . -size -100c 	# file size < 100 byte
+$ find . -size -1k 		# file size < 1k byte
+
+# By types
+$ find . -type f # files
+$ find . -type d # directories
+$ find . -type l # symlinks
+
+# By modified time
+$ find . -mtime -1 # files modified in a day
+$ find . -mmin -60 # files modified in last 60 mitnues
+$ find . -mtime 7  # files which have not modified over a week
+$ find . -mmin 60  # files which have not modified over an hour
+
+# By accessed time
+$ find . -atime -1 # files accessed in a day
+$ find . -amin -60 # files accessed in last 60 minutes
+$ find . -atime 7  # files which have not accessed over a week
+$ find . -amin 60  # files which have not accessed over an hour
+
+# By permission
+$ find . -perm a+r 	# all read-permission is allowed
+$ find . -perm 644  # permission code is 644
+$ find . -perm -444 # read-permission is allowed for all users
+$ find . -perm +444 # read-permission is allowed for one of owner, owner group or other users
+
+# By users
+$ find . -user david # files owned by david
+$ find . -uid XXXXXX # files owned by declared uid
+
+# By regexp
+# @see http://www.gnu.org/software/findutils/manual/html_mono/find.html#Regular-Expressions
+$ find . regex ".*git*"
+
+```
+
+### Action
+
+```bash
+
+# print
+$ find . -name "*git*" 				# shows matched files(default)
+$ find . -name "*git*" -print # shows matched files(default)
+$ find . -name "*git*" -ls		# shows file's information also
+
+# `-exec` enables you to execute command to the result
+$ find . -name "README.md" -exec rm {} ¥; # without confirmation
+$ find . -name "README.md" -ok rm {} ¥;		# with confirmation
+
+```
+
+### Example
+
+```bash
+
+# finds files updated within a day
+$ find . -type f -mtime -1
+
+# finds files updated within past 30 minutes
+$ find . -type f -mmin -60
+
+# find and delete files which have not been accessed in 200 days
+$ find . -atime +200 -exec rm {} ¥;
+
+```
+
 ## Hard link / Symbolic link
 
 ### What is the difference between hardlink and symlink?
