@@ -22,8 +22,8 @@
 
 ```bash
 # cd
-$ cd #changes directory to home
-$ cd - #goes back to previous files
+$ cd 		#changes directory to home
+$ cd - 	#goes back to previous files
 
 # less
 $ less test.md
@@ -41,23 +41,23 @@ $ tail -3 test.md # shows 3 bottom lines of test.md
 #copy
 $ cp -i test.md tmp # overwrites with confirmation
 $ cp -i test.md tmp # overwrites without confirmation
-$ cp -r tmp tmp2 # copy directory
+$ cp -r tmp tmp2 		# copy directory
 
 # move/rename
-$ mv -i data.txt tmp # overwrites with confirmation
-$ mv -f data.txt tmp # overwrites without confirmation
-$ mv tmpdir mydir # -r is not necessary for moving directory like `rm` or `cp` commands
+$ mv -i data.txt tmp 	# overwrites with confirmation
+$ mv -f data.txt tmp 	# overwrites without confirmation
+$ mv tmpdir mydir 		# -r is not necessary for moving directory like `rm` or `cp` commands
 
 # remove
-$ rm -i data.txt # removes with confirmation
-$ rm -f data.txt # removes without confirmation
-$ rm -r tmp # removes directory(even when the directory is NOT empty)
+$ rm -i data.txt 	# removes with confirmation
+$ rm -f data.txt 	# removes without confirmation
+$ rm -r tmp 			# removes directory(even when the directory is NOT empty)
 $ rm -R tmp # removes directory(same with -r option)
 $ rmdir tmp # `rmdir` also removes EMPTY files
 
 # create directory
-$ mkdir -p tmp/tmp2 # parents directory will be also created
-$ mkdir -m 705 mydir # creates directory with set permissions
+$ mkdir -p tmp/tmp2 	# parents directory will be also created
+$ mkdir -m 705 mydir 	# creates directory with set permissions
 
 
 ```
@@ -67,13 +67,13 @@ $ mkdir -m 705 mydir # creates directory with set permissions
 ```bash
 
 # count
-$ ls -l | tee count.txt | wc # creates result file and show the wc result
+$ ls -l | wc 			# shows bytes/lines/words count
 $ wc -c count.txt # shows only bytes count
 $ wc -l count.txt # shows only lines count
 $ wc -w count.txt # shows only words count
 
 # sort
-$ ls -l | sort # sorts by alphabetic order
+$ ls -l | sort 		# sorts by alphabetic order
 $ ls -l | sort -b # sorts ignoring spaces in the opening sentence
 $ ls -l | sort -f # sorts ignoring Small/Capital
 $ ls -l | sort -r # sorts in reverse way
@@ -207,9 +207,9 @@ $ find . -atime +200 -exec rm {} ¥;
 $ ls -i1 # with `-i` options, `ls` shows index node(i node)
 
 # creates hard links
-$ touch test.txt # creates test.txt
+$ touch test.txt 				# creates test.txt
 $ ln test.txt test.hard # creates hardlink of test.txt
-$ ls -i1 # check that i node of test.txt equals with test.hard
+$ ls -i1 								# check that i node of test.txt equals with test.hard
 
 # creates symbol links
 $ touch symbol.txt
@@ -217,12 +217,12 @@ $ ln -s symbol.txt symbol.sym
 $ ls -i1
 
 # let's have a look at the differene between hard and symbol
-$ touch {hard,symbol}.txt # creates hard.txt and symbol.txt
-$ ln hard.txt hard.hard # creates hard link
-$ ln -s symbol.txt symbol.sym # creates symbol link
-$ rm {hard,symbol}.txt # removes original .txt files
-$ cat hard.hard # see how it works
-$ cat symbol.sym # see how it works
+$ touch {hard,symbol}.txt 			# creates hard.txt and symbol.txt
+$ ln hard.txt hard.hard 				# creates hard link
+$ ln -s symbol.txt symbol.sym 	# creates symbol link
+$ rm {hard,symbol}.txt 					# removes original .txt files
+$ cat hard.hard 								# see how it works
+$ cat symbol.sym 								# see how it works
 
 ```
 
@@ -230,12 +230,12 @@ $ cat symbol.sym # see how it works
 
 ```bash
 # redirect result
-$ ls > redirect.txt # the result of `ls` command would be written to redirect2.txt
+$ ls > redirect.txt 			# the result of `ls` command would be written to redirect2.txt
 $ cat redirect.txt
-$ ls -i1 >> redirect.txt # adds the result to the existing file
+$ ls -i1 >> redirect.txt 	# adds the result to the existing file
 
 # redirect error
-$ ls -222 2> error.txt # 2> writes error log
+$ ls -222 2> error.txt 	# 2> writes error log
 $ ls -333 2>> error.txt # 2>> adds error log to the existing file
 
 # redirect both result and error
