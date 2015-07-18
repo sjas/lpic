@@ -349,6 +349,69 @@ $ ls -l | tee result.log | less
 
 ```
 
+## User
+
+```bash
+
+#############
+# basic
+#############
+
+# shows all users
+$ id
+
+# shows all groups
+$ groups
+
+# see User Database
+$ less /etc/passwd
+
+# see Group Database
+$ less /etc/group
+
+# adds user
+$ useradd david
+$ useradd -u 1000 david # with udi
+$ useradd -d /home/dev  # with custome home directory path
+
+# changes password
+$ passwd david
+
+# deletes user
+$ userdel david
+$ userdel -r david # deletes with home directory
+
+# adds group
+$ groupadd designer
+
+# deletes group
+$ groupdel designer
+
+#############
+# usermod
+#############
+
+# locks user
+# (when users would not be used for a long time)
+$ usermod -L david
+
+# unlocks user
+$ usermod -U david
+
+# changes primary group
+$ usermod -g develop david
+
+# changes sub group
+$ usermod -G develop david
+
+# changes uid
+$ usermod -u 1000 david
+
+# changes home directory path
+$ usermod -d /home/dev/ david
+
+```
+
 ## Useful tips
 
 ```bash
