@@ -188,18 +188,84 @@ $ find . -atime +200 -exec rm {} ¥;
 
 ```
 
-## Hard link / Symbolic link
+## Zip
 
-### What is the difference between hardlink and symlink?
+```bash
 
-> A hardlink isn't a pointer to a file, it's a directory entry (a file) pointing to the same inode. Even if you change the name of the other file, a hardlink still points to the file...
+#############
+# gzip
+#############
+# zip file
+$ cal > cal.txt
+$ gzip cal.txt 									# this creates cal.txt.gz but cal.txt would be deleted
+$ gzip -c cal.txt > cal.txt.gz 	# if original files should not be deleted
 
-> On the other hand, a symlink is actually pointing to another path (a file name); it resolves the name of the file each time you access it through the symlink.
+# zip directory
+$ mkdir tmp
+$ cp cal.txt tmp
+$ gzip -r tmp			# be sure that `gzip -r` will not zip directory itself
+
+# let's see how different
+$ ls -l 					# see the difference of sizes
+$ cat cal.txt 		# you can see the calander
+$ cat cal.txt.gp 	# but this shows misterious results
+
+# unzip
+$ gzip -d cal.txt.gp # unzip file
+$ gzip -dr tmp			 # unzip files in tmp directory
+$ gunzip cal.txt.gp  # equals with `gzip -d` command
+
+#############
+# bzip2
+#############
+$ bzip2 sample.dat    		# this creates sample.dat.bz2
+$ bzip2 -d sample.dat.bz2 # unzip
+
+
+#############
+# tar (and then gzip)
+#############
+# tar [options] archivefile.tar targetDirectory
+#
+# options
+# -c : creates archive
+# -x : unzip archive
+# -t : show files in archived file
+# -f : select archive file by file name
+# -r : add files to archived file
+# -v : show info in details
+# -z : gzip
+# -j : bzip2
+
+# example
+$ mkdir tmp
+$ ls -l > tmp/ls.txt
+$ cal > tmp/cal.txt
+# creates archived files
+$ tar cvf tmp.tar tmp 			# just archived and not compressed
+$ tar cvfz tmp.tar.gz tmp  	# archived and compressed with gzip
+$ tar cvfj tmp.tar.bz2 tmp 	# archived and compressed with bzip2
+# see the dirrerences
+$ ls -l
+
+```
+
+### gzip vs bzip2 vs tar?
+
+#### gzip/bzip2 vs tar?
+
+> tar isnt a compression format - its a way to combine multiple files into one file.
+
+> bz2 and gz are compression formats - variations on a theme - similar compression ratio's I think. The default archive manager with ubuntu can open most if not all of these type of files.
+
+#### Then gzip vs bzip2?
+
+> bz2 generally compresses better than gz, but is slower. gz is the de facto standard because it is older, and bz2 is not avaialble by default on some OSes (that's why you mostly find .gz files).
 
 @see
+- http://ubuntuforums.org/showthread.php?t=1538026
 
-- http://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link
-- http://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link
+## Hard link / Symbolic link
 
 ```bash
 
@@ -225,6 +291,17 @@ $ cat hard.hard 								# see how it works
 $ cat symbol.sym 								# see how it works
 
 ```
+
+### Hardlink vs Symlink?
+
+> A hardlink isn't a pointer to a file, it's a directory entry (a file) pointing to the same inode. Even if you change the name of the other file, a hardlink still points to the file...
+
+> On the other hand, a symlink is actually pointing to another path (a file name); it resolves the name of the file each time you access it through the symlink.
+
+@see
+
+- http://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link
+- http://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link
 
 ## Redirect
 
