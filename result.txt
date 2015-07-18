@@ -1,5 +1,0 @@
-total 40
--rw-r--r--  1 kenju  staff  4217  7 18 09:06 README.md
--rw-r--r--  1 kenju  staff   147  7 18 09:03 calendar.txt
--rwxr-xr-x  1 kenju  staff   248  7 17 08:16 gitBuild.sh
--rw-r--r--  1 kenju  staff   231  7 18 09:04 ls.txt
