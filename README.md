@@ -484,7 +484,7 @@ $ exit
 
 ```
 
-## Shell Script
+## Shell
 
 Here, we mainly use `bash` as an example.
 
@@ -583,6 +583,36 @@ $ echo $TERM
 # user
 $ echo $UID
 $ echo $USER
+
+```
+
+### Define Shell Variables
+
+```bash
+
+# defines variables
+$ name="David Brown"
+
+# use defined variables
+$ echo $name
+
+# unset defined variables
+$ unset name
+
+```
+
+### Environment Variables
+
+```bash
+
+# lists all environment variables
+$ printenv
+
+# lists all shell and environment variables
+$ set
+
+# sets environment variables
+$ export VAR=Ubuntu
 
 ```
 

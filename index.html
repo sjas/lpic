@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>README.md—/Users/kenju/Downloads/lpic</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <h1>Introduction</h1>
+<h2>About</h2>
+<p>This repository introduces a basic concept and commands of Linux.</p>
+<h2>Linux main directory</h2>
+<ul>
+<li>boot  : necessarry file for start up system like Linux kernel</li>
+<li>bin   : command for general users</li>
+<li>dev   : device files</li>
+<li>etc   : system setting files</li>
+<li>home  : home directory for users</li>
+<li>lib   : library</li>
+<li>media : mount point for outer media</li>
+<li>proc  : process information of system</li>
+<li>root  : home directory for root users</li>
+<li>sbin  : commands for system admin users</li>
+<li>tmp   : temporary files</li>
+<li>usr   : programs, libraries, documents, etc.</li>
+<li>var   : frequently updated files like log files</li>
+</ul>
+<h1>Command Lists</h1>
+<h2>File</h2>
+<div class="codehilite"><pre><span class="c"># cd</span>
+<span class="nv">$ </span><span class="nb">cd</span>        <span class="c">#changes directory to home</span>
+<span class="nv">$ </span><span class="nb">cd</span> -  <span class="c">#goes back to previous files</span>
+
+<span class="c"># less</span>
+<span class="nv">$ </span>less test.md
+<span class="c"># f/b : show next/previous page</span>
+<span class="c"># q   : quits</span>
+<span class="c"># =   : show file name and current line number</span>
+<span class="c"># /   : search in forward order</span>
+<span class="c"># ?   : search in backward order</span>
+<span class="c"># v   : launch vi editor</span>
+
+<span class="c">#head/tail</span>
+<span class="nv">$ </span>head -5 test.md <span class="c"># shows 5 heading lines of test.md</span>
+<span class="nv">$ </span>tail -3 test.md <span class="c"># shows 3 bottom lines of test.md</span>
+
+<span class="c">#copy</span>
+<span class="nv">$ </span>cp -i test.md tmp <span class="c"># overwrites with confirmation</span>
+<span class="nv">$ </span>cp -i test.md tmp <span class="c"># overwrites without confirmation</span>
+<span class="nv">$ </span>cp -r tmp tmp2        <span class="c"># copy directory</span>
+
+<span class="c"># move/rename</span>
+<span class="nv">$ </span>mv -i data.txt tmp    <span class="c"># overwrites with confirmation</span>
+<span class="nv">$ </span>mv -f data.txt tmp    <span class="c"># overwrites without confirmation</span>
+<span class="nv">$ </span>mv tmpdir mydir       <span class="c"># -r is not necessary for moving directory like `rm` or `cp` commands</span>
+
+<span class="c"># remove</span>
+<span class="nv">$ </span>rm -i data.txt    <span class="c"># removes with confirmation</span>
+<span class="nv">$ </span>rm -f data.txt    <span class="c"># removes without confirmation</span>
+<span class="nv">$ </span>rm -r tmp             <span class="c"># removes directory(even when the directory is NOT empty)</span>
+<span class="nv">$ </span>rm -R tmp <span class="c"># removes directory(same with -r option)</span>
+<span class="nv">$ </span>rmdir tmp <span class="c"># `rmdir` also removes EMPTY files</span>
+
+<span class="c"># create directory</span>
+<span class="nv">$ </span>mkdir -p tmp/tmp2     <span class="c"># parents directory will be also created</span>
+<span class="nv">$ </span>mkdir -m <span class="m">705</span> mydir    <span class="c"># creates directory with set permissions</span>
+</pre></div>
+
+
+<h2>Count / Sort</h2>
+<div class="codehilite"><pre><span class="c"># count</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> wc            <span class="c"># shows bytes/lines/words count</span>
+<span class="nv">$ </span>wc -c count.txt <span class="c"># shows only bytes count</span>
+<span class="nv">$ </span>wc -l count.txt <span class="c"># shows only lines count</span>
+<span class="nv">$ </span>wc -w count.txt <span class="c"># shows only words count</span>
+
+<span class="c"># sort</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> sort      <span class="c"># sorts by alphabetic order</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> sort -b <span class="c"># sorts ignoring spaces in the opening sentence</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> sort -f <span class="c"># sorts ignoring Small/Capital</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> sort -r <span class="c"># sorts in reverse way</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> sort -n <span class="c"># sorts number not as a string but as a number</span>
+</pre></div>
+
+
+<h2>Search</h2>
+<h3>Locate</h3>
+<div class="codehilite"><pre><span class="c"># `locate` commands search based on database</span>
+<span class="c"># therefore it is faster than `find` command</span>
+<span class="nv">$ </span>locate sort
+
+<span class="c"># to update database</span>
+<span class="c"># * this is usually executed regularly</span>
+<span class="nv">$ </span>updatedb
+</pre></div>
+
+
+<h3>Find</h3>
+<h4>Option</h4>
+<div class="codehilite"><pre><span class="c"># `maxdepth` otption defines the depth of search target</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;README.md&quot;</span> -maxdepth 1
+</pre></div>
+
+
+<h4>Condition</h4>
+<div class="codehilite"><pre><span class="c"># Basic</span>
+<span class="c"># find [targetDirectory] [option]</span>
+
+<span class="c"># By name</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;README.md&quot;</span>
+
+<span class="c"># By size</span>
+<span class="nv">$ </span>find . -size 1k       <span class="c"># file size = 1k byte</span>
+<span class="nv">$ </span>find . -size +100c    <span class="c"># file size &gt; 100 byte</span>
+<span class="nv">$ </span>find . -size +1k      <span class="c"># file size &gt; 1k byte</span>
+<span class="nv">$ </span>find . -size -100c    <span class="c"># file size &lt; 100 byte</span>
+<span class="nv">$ </span>find . -size -1k      <span class="c"># file size &lt; 1k byte</span>
+
+<span class="c"># By types</span>
+<span class="nv">$ </span>find . -type f <span class="c"># files</span>
+<span class="nv">$ </span>find . -type d <span class="c"># directories</span>
+<span class="nv">$ </span>find . -type l <span class="c"># symlinks</span>
+
+<span class="c"># By modified time</span>
+<span class="nv">$ </span>find . -mtime -1 <span class="c"># files modified in a day</span>
+<span class="nv">$ </span>find . -mmin -60 <span class="c"># files modified in last 60 mitnues</span>
+<span class="nv">$ </span>find . -mtime <span class="m">7</span>  <span class="c"># files which have not modified over a week</span>
+<span class="nv">$ </span>find . -mmin <span class="m">60</span>  <span class="c"># files which have not modified over an hour</span>
+
+<span class="c"># By accessed time</span>
+<span class="nv">$ </span>find . -atime -1 <span class="c"># files accessed in a day</span>
+<span class="nv">$ </span>find . -amin -60 <span class="c"># files accessed in last 60 minutes</span>
+<span class="nv">$ </span>find . -atime <span class="m">7</span>  <span class="c"># files which have not accessed over a week</span>
+<span class="nv">$ </span>find . -amin <span class="m">60</span>  <span class="c"># files which have not accessed over an hour</span>
+
+<span class="c"># By permission</span>
+<span class="nv">$ </span>find . -perm a+r  <span class="c"># all read-permission is allowed</span>
+<span class="nv">$ </span>find . -perm <span class="m">644</span>  <span class="c"># permission code is 644</span>
+<span class="nv">$ </span>find . -perm -444 <span class="c"># read-permission is allowed for all users</span>
+<span class="nv">$ </span>find . -perm +444 <span class="c"># read-permission is allowed for one of owner, owner group or other users</span>
+
+<span class="c"># By users</span>
+<span class="nv">$ </span>find . -user david <span class="c"># files owned by david</span>
+<span class="nv">$ </span>find . -uid XXXXXX <span class="c"># files owned by declared uid</span>
+
+<span class="c"># By regexp</span>
+<span class="c"># @see http://www.gnu.org/software/findutils/manual/html_mono/find.html#Regular-Expressions</span>
+<span class="nv">$ </span>find . regex <span class="s2">&quot;.*git*&quot;</span>
+</pre></div>
+
+
+<h3>Action</h3>
+<div class="codehilite"><pre><span class="c"># print</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;*git*&quot;</span>              <span class="c"># shows matched files(default)</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;*git*&quot;</span> -print <span class="c"># shows matched files(default)</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;*git*&quot;</span> -ls      <span class="c"># shows file&#39;s information also</span>
+
+<span class="c"># `-exec` enables you to execute command to the result</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;README.md&quot;</span> -exec rm <span class="o">{}</span> ¥<span class="p">;</span> <span class="c"># without confirmation</span>
+<span class="nv">$ </span>find . -name <span class="s2">&quot;README.md&quot;</span> -ok rm <span class="o">{}</span> ¥<span class="p">;</span>     <span class="c"># with confirmation</span>
+</pre></div>
+
+
+<h3>Example</h3>
+<div class="codehilite"><pre><span class="c"># finds files updated within a day</span>
+<span class="nv">$ </span>find . -type f -mtime -1
+
+<span class="c"># finds files updated within past 30 minutes</span>
+<span class="nv">$ </span>find . -type f -mmin -60
+
+<span class="c"># find and delete files which have not been accessed in 200 days</span>
+<span class="nv">$ </span>find . -atime +200 -exec rm <span class="o">{}</span> ¥<span class="p">;</span>
+</pre></div>
+
+
+<h2>Zip</h2>
+<div class="codehilite"><pre><span class="c">#############</span>
+<span class="c"># gzip</span>
+<span class="c">#############</span>
+<span class="c"># zip file</span>
+<span class="nv">$ </span>cal &gt; cal.txt
+<span class="nv">$ </span>gzip cal.txt                                  <span class="c"># this creates cal.txt.gz but cal.txt would be deleted</span>
+<span class="nv">$ </span>gzip -c cal.txt &gt; cal.txt.gz  <span class="c"># if original files should not be deleted</span>
+
+<span class="c"># zip directory</span>
+<span class="nv">$ </span>mkdir tmp
+<span class="nv">$ </span>cp cal.txt tmp
+<span class="nv">$ </span>gzip -r tmp           <span class="c"># be sure that `gzip -r` will not zip directory itself</span>
+
+<span class="c"># let&#39;s see how different</span>
+<span class="nv">$ </span>ls -l                     <span class="c"># see the difference of sizes</span>
+<span class="nv">$ </span>cat cal.txt       <span class="c"># you can see the calander</span>
+<span class="nv">$ </span>cat cal.txt.gp    <span class="c"># but this shows misterious results</span>
+
+<span class="c"># unzip</span>
+<span class="nv">$ </span>gzip -d cal.txt.gp <span class="c"># unzip file</span>
+<span class="nv">$ </span>gzip -dr tmp           <span class="c"># unzip files in tmp directory</span>
+<span class="nv">$ </span>gunzip cal.txt.gp  <span class="c"># equals with `gzip -d` command</span>
+
+<span class="c">#############</span>
+<span class="c"># bzip2</span>
+<span class="c">#############</span>
+<span class="nv">$ </span>bzip2 sample.dat          <span class="c"># this creates sample.dat.bz2</span>
+<span class="nv">$ </span>bzip2 -d sample.dat.bz2 <span class="c"># unzip</span>
+
+
+<span class="c">#############</span>
+<span class="c"># tar (and then gzip)</span>
+<span class="c">#############</span>
+<span class="c"># tar [options] archivefile.tar targetDirectory</span>
+<span class="c">#</span>
+<span class="c"># options</span>
+<span class="c"># -c : creates archive</span>
+<span class="c"># -x : unzip archive</span>
+<span class="c"># -t : show files in archived file</span>
+<span class="c"># -f : select archive file by file name</span>
+<span class="c"># -r : add files to archived file</span>
+<span class="c"># -v : show info in details</span>
+<span class="c"># -z : gzip</span>
+<span class="c"># -j : bzip2</span>
+
+<span class="c"># example</span>
+<span class="nv">$ </span>mkdir tmp
+<span class="nv">$ </span>ls -l &gt; tmp/ls.txt
+<span class="nv">$ </span>cal &gt; tmp/cal.txt
+<span class="c"># creates archived files</span>
+<span class="nv">$ </span>tar cvf tmp.tar tmp           <span class="c"># just archived and not compressed</span>
+<span class="nv">$ </span>tar cvfz tmp.tar.gz tmp   <span class="c"># archived and compressed with gzip</span>
+<span class="nv">$ </span>tar cvfj tmp.tar.bz2 tmp  <span class="c"># archived and compressed with bzip2</span>
+<span class="c"># see the dirrerences</span>
+<span class="nv">$ </span>ls -l
+</pre></div>
+
+
+<h3>gzip vs bzip2 vs tar?</h3>
+<h4>gzip/bzip2 vs tar?</h4>
+<blockquote>
+<p>tar isnt a compression format - its a way to combine multiple files into one file.</p>
+<p>bz2 and gz are compression formats - variations on a theme - similar compression ratio's I think. The default archive manager with ubuntu can open most if not all of these type of files.</p>
+</blockquote>
+<h4>Then gzip vs bzip2?</h4>
+<blockquote>
+<p>bz2 generally compresses better than gz, but is slower. gz is the de facto standard because it is older, and bz2 is not avaialble by default on some OSes (that's why you mostly find .gz files).</p>
+</blockquote>
+<p>@see
+- http://ubuntuforums.org/showthread.php?t=1538026</p>
+<h2>Hard link / Symbolic link</h2>
+<div class="codehilite"><pre><span class="c"># shows hardlinks</span>
+<span class="nv">$ </span>ls -i1 <span class="c"># with `-i` options, `ls` shows index node(i node)</span>
+
+<span class="c"># creates hard links</span>
+<span class="nv">$ </span>touch test.txt                <span class="c"># creates test.txt</span>
+<span class="nv">$ </span>ln test.txt test.hard <span class="c"># creates hardlink of test.txt</span>
+<span class="nv">$ </span>ls -i1                                <span class="c"># check that i node of test.txt equals with test.hard</span>
+
+<span class="c"># creates symbol links</span>
+<span class="nv">$ </span>touch symbol.txt
+<span class="nv">$ </span>ln -s symbol.txt symbol.sym
+<span class="nv">$ </span>ls -i1
+
+<span class="c"># let&#39;s have a look at the differene between hard and symbol</span>
+<span class="nv">$ </span>touch <span class="o">{</span>hard,symbol<span class="o">}</span>.txt           <span class="c"># creates hard.txt and symbol.txt</span>
+<span class="nv">$ </span>ln hard.txt hard.hard                 <span class="c"># creates hard link</span>
+<span class="nv">$ </span>ln -s symbol.txt symbol.sym   <span class="c"># creates symbol link</span>
+<span class="nv">$ </span>rm <span class="o">{</span>hard,symbol<span class="o">}</span>.txt                  <span class="c"># removes original .txt files</span>
+<span class="nv">$ </span>cat hard.hard                                 <span class="c"># see how it works</span>
+<span class="nv">$ </span>cat symbol.sym                                <span class="c"># see how it works</span>
+</pre></div>
+
+
+<h3>Hardlink vs Symlink?</h3>
+<blockquote>
+<p>A hardlink isn't a pointer to a file, it's a directory entry (a file) pointing to the same inode. Even if you change the name of the other file, a hardlink still points to the file...</p>
+<p>On the other hand, a symlink is actually pointing to another path (a file name); it resolves the name of the file each time you access it through the symlink.</p>
+</blockquote>
+<p>@see</p>
+<ul>
+<li>http://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link</li>
+<li>http://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link</li>
+</ul>
+<h2>Redirect</h2>
+<div class="codehilite"><pre><span class="c"># redirect result</span>
+<span class="nv">$ </span>ls &gt; redirect.txt             <span class="c"># the result of `ls` command would be written to redirect2.txt</span>
+<span class="nv">$ </span>cat redirect.txt
+<span class="nv">$ </span>ls -i1 &gt;&gt; redirect.txt    <span class="c"># adds the result to the existing file</span>
+
+<span class="c"># redirect error</span>
+<span class="nv">$ </span>ls -222 2&gt; error.txt  <span class="c"># 2&gt; writes error log</span>
+<span class="nv">$ </span>ls -333 2&gt;&gt; error.txt <span class="c"># 2&gt;&gt; adds error log to the existing file</span>
+
+<span class="c"># redirect both result and error</span>
+<span class="c"># .   = current file</span>
+<span class="c"># aaa = not-existring file</span>
+<span class="nv">$ </span>ls . aaa &gt; ls.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="c"># wrtites both the result and error log</span>
+
+<span class="c"># tips</span>
+<span class="c"># by combining `cat` and redirect, you can join the result of</span>
+<span class="c"># multiple files contents</span>
+<span class="nv">$ </span>cat apple.txt banana.txt &gt; banapple.txt
+
+<span class="c"># input redirect</span>
+<span class="c"># `tr a-z A-Z` replaces all small caps to Capital caps, but</span>
+<span class="c"># this command cannot have file as an argument.</span>
+<span class="c"># By usring input `&lt;`, a content of file can be sent to commands.</span>
+<span class="nv">$ </span>tr a-z A-Z  &lt; error.txt
+</pre></div>
+
+
+<h2>Pipe</h2>
+<div class="codehilite"><pre><span class="nv">$ </span>ls -l &gt; ls.txt
+<span class="nv">$ </span>tr a-z A-Z &lt; ls.txt
+
+<span class="c"># By using pipe, above process can be written in one line</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> tr a-z A-Z
+
+<span class="c"># If you want to send the result both to a file and other command</span>
+<span class="c"># then use `tee`</span>
+<span class="nv">$ </span>ls -l <span class="p">|</span> tee result.log <span class="p">|</span> less
+</pre></div>
+
+
+<h2>User</h2>
+<div class="codehilite"><pre><span class="c">#############</span>
+<span class="c"># basic</span>
+<span class="c">#############</span>
+
+<span class="c"># shows all users</span>
+<span class="nv">$ </span>id
+
+<span class="c"># shows all groups</span>
+<span class="nv">$ </span>groups
+
+<span class="c"># see User Database</span>
+<span class="nv">$ </span>less /etc/passwd
+
+<span class="c"># see Group Database</span>
+<span class="nv">$ </span>less /etc/group
+
+<span class="c"># adds user</span>
+<span class="nv">$ </span>useradd david
+<span class="nv">$ </span>useradd -u <span class="m">1000</span> david <span class="c"># with udi</span>
+<span class="nv">$ </span>useradd -d /home/dev  <span class="c"># with custome home directory path</span>
+
+<span class="c"># changes password</span>
+<span class="nv">$ </span>passwd david
+
+<span class="c"># deletes user</span>
+<span class="nv">$ </span>userdel david
+<span class="nv">$ </span>userdel -r david <span class="c"># deletes with home directory</span>
+
+<span class="c"># adds group</span>
+<span class="nv">$ </span>groupadd designer
+
+<span class="c"># deletes group</span>
+<span class="nv">$ </span>groupdel designer
+
+<span class="c">#############</span>
+<span class="c"># usermod</span>
+<span class="c">#############</span>
+
+<span class="c"># locks user</span>
+<span class="c"># (when users would not be used for a long time)</span>
+<span class="nv">$ </span>usermod -L david
+
+<span class="c"># unlocks user</span>
+<span class="nv">$ </span>usermod -U david
+
+<span class="c"># changes primary group</span>
+<span class="nv">$ </span>usermod -g develop david
+
+<span class="c"># changes sub group</span>
+<span class="nv">$ </span>usermod -G develop david
+
+<span class="c"># changes uid</span>
+<span class="nv">$ </span>usermod -u <span class="m">1000</span> david
+
+<span class="c"># changes home directory path</span>
+<span class="nv">$ </span>usermod -d /home/dev/ david
+</pre></div>
+
+
+<h2>Permission</h2>
+<h3>Owner (user/group)</h3>
+<div class="codehilite"><pre><span class="c"># changes owner</span>
+<span class="nv">$ </span>chown alice sample
+<span class="nv">$ </span>chown -R alice sample <span class="c"># changes all files in the directory</span>
+
+<span class="c"># changes group</span>
+<span class="nv">$ </span>chgrp develp tmp
+<span class="nv">$ </span>chgrop -R develop tmp
+
+<span class="c"># changes owner and group at the same time</span>
+<span class="nv">$ </span>chown alice:develop tmp
+</pre></div>
+
+
+<h3>Accessible Types</h3>
+<ul>
+<li>Permission<ul>
+<li>r: read(4)</li>
+<li>w: write(2)</li>
+<li>x: execute(1)</li>
+</ul>
+</li>
+<li>Target Segment<ul>
+<li>owner</li>
+<li>group to which the owner belongs</li>
+<li>other users</li>
+</ul>
+</li>
+<li>Permission Counters<ul>
+<li>7 : 4 + 2 + 1 = r + w + x</li>
+<li>5 : 4 + 0 + 1 = r + x</li>
+<li>4 : 4 + 0 + 0 + r</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span class="nv">$ </span>touch sample.txt
+<span class="nv">$ </span>ls -l sample.txt
+-rw-r--r--  <span class="m">1</span> username  group  <span class="m">0</span>  <span class="m">1</span> <span class="m">10</span> 10:11 sample.txt
+<span class="c"># user   = can read and write</span>
+<span class="c"># group  = can read only</span>
+<span class="c"># others = can read only</span>
+
+<span class="c"># changes permission of sample.txt</span>
+<span class="nv">$ </span>chmod <span class="m">755</span> sample.txt
+<span class="nv">$ </span>ls -l sample.txt
+-rwxr-xr-x  <span class="m">1</span> username  group  <span class="m">0</span>  <span class="m">1</span> <span class="m">10</span> 10:11 sample.txt
+
+<span class="c"># other options</span>
+<span class="c"># - target  : u, g, o</span>
+<span class="c"># - control : +, -, =</span>
+<span class="c"># - type        : r, w, x</span>
+<span class="c">#</span>
+<span class="nv">$ </span>chmod ug+rx sample.txt
+<span class="nv">$ </span>ls -l sample.txt
+-rwxr--r--  <span class="m">1</span> username  group  <span class="m">0</span>  <span class="m">1</span> <span class="m">10</span> 10:11 sample.txt
+</pre></div>
+
+
+<h3>root</h3>
+<div class="codehilite"><pre><span class="c"># changes user to root user</span>
+<span class="nv">$ </span>su - <span class="c"># you need `-` option to use some restricted commands</span>
+<span class="nv">$ </span><span class="nb">exit</span>
+</pre></div>
+
+
+<h2>Shell</h2>
+<p>Here, we mainly use <code>bash</code> as an example.</p>
+<h3>Basic Usage</h3>
+<div class="codehilite"><pre><span class="c"># shows all shells list which you can use</span>
+<span class="nv">$ </span>cat /etc/shells
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+
+<span class="c"># shows PATH</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PATH</span>
+
+<span class="c"># `;`</span>
+<span class="c"># commands would be continually executed</span>
+<span class="nv">$ </span>git init<span class="p">;</span> git add -A<span class="p">;</span> git commit -m <span class="s2">&quot;first commit&quot;</span>
+
+<span class="c"># `&amp;&amp;`</span>
+<span class="c"># means &quot;AND&quot;</span>
+<span class="nv">$ </span>touch README.md <span class="o">&amp;&amp;</span> git add README.md
+
+<span class="c"># `||`</span>
+<span class="c"># means &quot;OR&quot;</span>
+<span class="nv">$ </span><span class="nb">cd</span> /tmp <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;there is no such directory&quot;</span>
+
+<span class="c"># shows executed commands history</span>
+<span class="nv">$ </span><span class="nb">history</span>
+<span class="nv">$ </span><span class="nb">history</span> -c            <span class="c"># deletes history</span>
+<span class="nv">$ </span><span class="nb">history </span><span class="m">5</span>             <span class="c"># shows the 5 latest history</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HISTSIZE</span>    <span class="c"># shows the size of saved history</span>
+<span class="nv">$ </span>!cat                      <span class="c"># executes the latest command begin with `cat`</span>
+<span class="nv">$ </span>!732                      <span class="c"># executes the history with the number</span>
+<span class="nv">$ </span>!!                            <span class="c"># executes the last command in history</span>
+<span class="nv">$ </span>!-3                       <span class="c"># executes the 3 before command in history</span>
+<span class="nv">$ </span>^cat^ls         <span class="c"># executes the latest command, after replacing `ls` command with `cat`</span>
+</pre></div>
+
+
+<h3>Keyboard Shortcuts</h3>
+<p>There are some userful keyboard shortcut in bash.</p>
+<ul>
+<li><code>tab</code>      : complement commands or paths</li>
+<li><code>ctrl + a</code> : move cursor to the head of the line</li>
+<li><code>ctrl + e</code> : move cursor to the end of the line</li>
+<li><code>crll + l</code> : clear display</li>
+<li><code>ctrl + c</code> : stop currently executing process</li>
+<li><code>ctrl + s</code> : stop showing result onto the display</li>
+<li><code>ctrl + q</code> : restart showing result onto the display</li>
+<li><code>ctrl + z</code> : stop currently executing process temporarily</li>
+<li><code>ctrl + d</code> : log out</li>
+<li><code>ctrl + r</code> : starts incremental search (commands history)</li>
+</ul>
+<h3>Shell Variables</h3>
+<div class="codehilite"><pre><span class="c"># history</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HISTFILE</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HISTFILESIZE</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HISTSIZE</span>
+
+<span class="c"># home directory path</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HOME</span>
+
+<span class="c"># hostname</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$HOSTNAME</span>
+
+<span class="c"># language</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$LANG</span>
+
+<span class="c"># command search path</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PATH</span>
+
+<span class="c"># prompt string</span>
+<span class="c"># @see http://www.unix.com/shell-programming-and-scripting/131510-need-explanation-ps1-ps2-ps3-ps4.html</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PS1</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PS2</span> <span class="c"># subshell prompt string, by default &quot;&gt;&quot;</span>
+
+<span class="c"># current directory path</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PWD</span>
+
+<span class="c"># current shell</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$SHELL</span>
+
+<span class="c"># terminal type</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$TERM</span>
+
+<span class="c"># user</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$UID</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$USER</span>
+</pre></div>
+
+
+<h3>Define Shell Variables</h3>
+<div class="codehilite"><pre><span class="c"># defines variables</span>
+<span class="nv">$ name</span><span class="o">=</span><span class="s2">&quot;David Brown&quot;</span>
+
+<span class="c"># use defined variables</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$name</span>
+
+<span class="c"># unset defined variables</span>
+<span class="nv">$ </span><span class="nb">unset </span>name
+</pre></div>
+
+
+<h3>Environment Variables</h3>
+<div class="codehilite"><pre><span class="c"># lists all environment variables</span>
+<span class="nv">$ </span>printenv
+
+<span class="c"># lists all shell and environment variables</span>
+<span class="nv">$ </span><span class="nb">set</span>
+
+<span class="c"># sets environment variables</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">VAR</span><span class="o">=</span>Ubuntu
+</pre></div>
+
+
+<h2>Useful tips</h2>
+<div class="codehilite"><pre><span class="c"># {}</span>
+<span class="c"># the first command is equals with the second one</span>
+<span class="nv">$ </span>touch <span class="nb">test</span><span class="o">{</span>1,2,3<span class="o">}</span>.mdi
+<span class="nv">$ </span>touch test1.md test2.md test3.md
+</pre></div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
