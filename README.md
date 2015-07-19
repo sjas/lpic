@@ -897,6 +897,7 @@ $ tzselect
 ```
 
 About local environment variables
+
 - LANG        : all catetories
 - LC_MESSAGES : used for showing message
 - LC_TIME     : format of date/time
@@ -921,3 +922,18 @@ $ date +"%Y%m%d %H:%M %a(%b)"
 $ ntpdate ntp.ring.gr.jp
 
 ```
+
+<!-- <style>
+body{
+	background-image:url(ubuntu.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+}
+.markdown-body pre {
+	color: #0086B3;
+}
+.markdown-body blockquote {
+	color: rgba(205, 255, 255, 0.8);
+}
+</style> -->

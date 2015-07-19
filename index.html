@@ -15,8 +15,27 @@
       <div id="markup">
         <article id="content" class="markdown-body">
           <h1>Introduction</h1>
+<style>
+body{
+    background-image:url(ubuntu.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+.markdown-body pre {
+    color: #0086B3;
+}
+.markdown-body blockquote {
+    color: rgba(205, 255, 255, 0.8);
+}
+</style>
+
 <h2>About</h2>
 <p>This repository introduces a basic concept and commands of Linux.</p>
+<ul>
+<li><a href="https://github.com/KENJU/lpic">Github</a></li>
+<li><a href="http://kenju.github.io/lpic/">Docs</a></li>
+</ul>
 <h2>Linux main directory</h2>
 <ul>
 <li>boot  : necessarry file for start up system like Linux kernel</li>
@@ -569,11 +588,266 @@
 </pre></div>
 
 
-<h2>Useful tips</h2>
+<h2>Shell Script</h2>
+<h3>Basic Usage</h3>
+<div class="codehilite"><pre><span class="c"># executes shell script</span>
+<span class="nv">$ </span><span class="nb">source </span>sampleshell.sh
+<span class="nv">$ </span>. sampleshell.sh      <span class="c"># this is the same with the above command</span>
+</pre></div>
+
+
+<h3>Basic Syntax</h3>
+<h4>Parameters</h4>
+<ul>
+<li>$# : the number of parameters</li>
+<li>$@ : all parameters</li>
+<li>$1 : 1st parameter</li>
+<li>$2 : 2nd parameter</li>
+<li>$3 : 3rd parameter...</li>
+</ul>
+<h4>Condition Expression</h4>
+<ul>
+<li>Filetype ( return true when... )<ul>
+<li><code>-e</code> : file exists</li>
+<li><code>-f</code> : file type is <code>file</code> (not directory, etc)</li>
+<li><code>-d</code> : file type is 'directory'</li>
+<li><code>-r</code> : file exists and is readable</li>
+<li><code>-w</code> : file exists and is writable</li>
+<li><code>-x</code> : file exists and is executable</li>
+<li><code>-L</code> : is symbolic link</li>
+</ul>
+</li>
+<li>Number ( return true when... )<ul>
+<li><code>A -eq B</code> : A equals with B</li>
+<li><code>A -ge B</code> : A is greater/equal than/with B</li>
+<li><code>A -gt B</code> : A is greater then B</li>
+<li><code>A -le B</code> : A is less/equal than/with B</li>
+<li><code>A -lt B</code> : A is less than B</li>
+<li><code>A -ne B</code> : A does not equal with B</li>
+</ul>
+</li>
+<li>String ( return true when... )<ul>
+<li><code>-z A</code>   : the size of A is 0</li>
+<li><code>A = B</code>  : A equals with B</li>
+<li><code>A != B</code> : A does not equal with B</li>
+</ul>
+</li>
+<li>Boolean (return trueh when... )<ul>
+<li><code>! A</code>    : A is false</li>
+<li><code>A -a B</code> : A and B are true</li>
+<li><code>A -o B</code> : A or B is true</li>
+</ul>
+</li>
+</ul>
+<h4>if statement</h4>
+<div class="codehilite"><pre><span class="c"># when the 1st parameter id directory,</span>
+<span class="c"># return `ls -l`</span>
+
+<span class="k">if</span> <span class="o">[</span> -d <span class="nv">$1</span> <span class="o">]</span>
+    <span class="k">then</span>
+        ls -l <span class="nv">$1</span>
+    <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s1">&#39;No such directory&#39;</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<h4>case statement</h4>
+<div class="codehilite"><pre><span class="k">case</span> <span class="nv">$1</span> in
+    <span class="o">[</span> -d <span class="nv">$1</span> <span class="o">]</span> <span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Is directory&quot;</span>
+        <span class="p">;;</span>
+    <span class="o">[</span> -f <span class="nv">$1</span> <span class="o">]</span> <span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Is file&quot;</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Undefined&quot;</span>
+        <span class="p">;;</span>
+<span class="k">esac</span>
+</pre></div>
+
+
+<h4>while statement</h4>
+<div class="codehilite"><pre><span class="nv">i</span><span class="o">=</span>1
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$i</span> -le <span class="nv">$1</span> <span class="o">]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$i</span>
+    <span class="nb">let </span><span class="nv">i</span><span class="o">=</span>i+1
+<span class="k">done</span>
+</pre></div>
+
+
+<h4>for statement</h4>
+<div class="codehilite"><pre><span class="nv">i</span><span class="o">=</span>1
+<span class="k">for</span> uid in Will Smith David
+    <span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</pre></div>
+
+
+<h3>alias</h3>
+<div class="codehilite"><pre><span class="c"># lists all defined alias</span>
+<span class="nv">$ </span><span class="nb">alias</span>
+
+<span class="c"># sets new alias</span>
+<span class="nv">$ </span><span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ln -la&#39;</span>
+
+<span class="c"># uses new defined alias</span>
+<span class="nv">$ </span>la
+
+<span class="c"># unset alias</span>
+<span class="nv">$ </span><span class="nb">unalias </span>la
+</pre></div>
+
+
+<h3>function</h3>
+<div class="codehilite"><pre><span class="c"># lists all declared function</span>
+
+<span class="c"># you need space before and after `{}` blanckets</span>
+<span class="c"># $N means arguments</span>
+<span class="nv">$ </span><span class="k">function</span> dlist<span class="o">()</span> <span class="o">{</span> ls -l <span class="nv">$1</span> <span class="p">|</span> grep <span class="s1">&#39;^d&#39;</span><span class="p">;</span> <span class="o">}</span>
+
+<span class="c"># uses defines function like below</span>
+<span class="nv">$ </span>dlist /
+
+<span class="c"># above is the same with below command</span>
+<span class="nv">$ </span>ls -l / <span class="p">|</span> grep <span class="s1">&#39;^d&#39;</span>
+
+<span class="c"># unset defined function</span>
+<span class="nv">$ </span><span class="nb">unset </span>dlist
+</pre></div>
+
+
+<h2>Package</h2>
+<div class="codehilite"><pre><span class="c"># shows system architecture</span>
+<span class="c"># return</span>
+<span class="c">#   - i386 / i686 : 32 bit binary package</span>
+<span class="c">#   - x86_64            : 64 bit binary package</span>
+<span class="c">#   - noarch            : architecture-independent package</span>
+<span class="c">#   - src               : source package</span>
+<span class="c">#</span>
+<span class="nv">$ </span>arch
+</pre></div>
+
+
+<h2>File System/Device Files</h2>
+<div class="codehilite"><pre><span class="c"># shows detailed info about Linux file system</span>
+<span class="nv">$ </span>dumpe2fs /dev/sda1
+
+<span class="c"># shows all device files</span>
+<span class="nv">$ </span>ls /dev
+
+<span class="c"># add `&amp;` at the end of the command line to run the command in the background</span>
+<span class="nv">$ </span>find / -name <span class="s2">&quot;*node*&quot;</span> -type f &gt; nodelog.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+
+<span class="c"># shows all jobs</span>
+<span class="nv">$ </span><span class="nb">jobs</span>
+
+<span class="c"># terminate jobs</span>
+<span class="nv">$ </span><span class="nb">kill</span> %1
+</pre></div>
+
+
+<h3>Device files</h3>
+<p>As for the device files, have a look at below table for futher information.</p>
+<ul>
+<li>sda    : 1st disk device</li>
+<li>sdb        : 2nd disk device</li>
+<li>sda*   : other disk device</li>
+<li>scd*   : CD/DVD drive</li>
+<li>tty*   : terminals</li>
+<li>pts    : vertual terminals</li>
+<li>ttysS* : serial ports</li>
+<li>lp         : printer device</li>
+</ul>
+<h3>Log files</h3>
+<ul>
+<li><code>var/log/messages</code> : general log</li>
+<li><code>var/log/secure</code>   : log about authentication</li>
+<li><code>var/log/cron</code>     : log about cron</li>
+<li><code>var/log/maillog</code>  : log about maillog</li>
+<li><code>var/log/boot.log</code> : log about starting up system</li>
+<li><code>var/log/wtmp</code>     : log about user logging in</li>
+<li><code>var/log/lastlog</code>  : log about each user last logging in</li>
+<li><code>var/run/utmp</code>     : log about currently-logging-in user</li>
+</ul>
+<h2>Cron</h2>
+<div class="codehilite"><pre><span class="nv">$ </span>crontab -e <span class="c"># edits crontab</span>
+<span class="nv">$ </span>crontab -l <span class="c"># lists crontab</span>
+<span class="nv">$ </span>crontab -r <span class="c"># remobes crontab</span>
+</pre></div>
+
+
+<p>When you run the above <code>$ crontab -e</code> command, an editor would be launched and now you can edit the cron file. Here is the basic grammer rules when writing cron.</p>
+<div class="codehilite"><pre><span class="c"># *general rule*</span>
+<span class="c"># min hour day month DOW command</span>
+
+<span class="c"># run `/usr/bin/updatedb`</span>
+<span class="c"># everyday, at 4 am</span>
+<span class="m">0</span> <span class="m">4</span> * * * /usr/bin/updatedb
+
+<span class="c"># run `/usr/bin/updatedb`</span>
+<span class="c"># on every 15th of each month, 1am</span>
+<span class="m">0</span> <span class="m">1</span> <span class="m">15</span> * * /usr/bin/updatedb
+
+<span class="c"># run `/user/bin/updatedb`</span>
+<span class="c"># on every 5 minutes</span>
+*/5 * * * * /usr/bin/updatedb
+</pre></div>
+
+
+<h3><code>at</code></h3>
+<p>If you want to run not continuously but once, then user <code>at</code> command.</p>
+<div class="codehilite"><pre><span class="c"># lists all scheduled jobs</span>
+<span class="nv">$ </span>at -l
+<span class="c"># or use this</span>
+<span class="nv">$ </span>atq
+
+<span class="c"># deletes scheduled jobs with job number</span>
+<span class="nv">$ </span>at -d &lt;job number&gt;
+
+<span class="c"># notify user by sending email when a job is done</span>
+<span class="nv">$ </span>at -m
+</pre></div>
+
+
+<h2>Others</h2>
+<h3>Locale</h3>
+<div class="codehilite"><pre><span class="c"># shows local environment variables</span>
+<span class="nv">$ </span>locale
+
+<span class="c"># shows timezone</span>
+<span class="nv">$ </span>ls /usr/share/zoneinfo/
+
+<span class="c"># sets timezone</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span><span class="s1">&#39;Asia/Tokyo&#39;</span>
+
+<span class="c"># sets timezone in command shell</span>
+<span class="nv">$ </span>tzselect
+</pre></div>
+
+
+<p>About local environment variables</p>
+<ul>
+<li>LANG        : all catetories</li>
+<li>LC_MESSAGES : used for showing message</li>
+<li>LC_TIME     : format of date/time</li>
+<li>LC_MONETARY : format of currency</li>
+<li>LC_NUMERIC  : format of number</li>
+<li>LC_ALL      : all categories</li>
+</ul>
+<h3>Useful tips</h3>
 <div class="codehilite"><pre><span class="c"># {}</span>
 <span class="c"># the first command is equals with the second one</span>
-<span class="nv">$ </span>touch <span class="nb">test</span><span class="o">{</span>1,2,3<span class="o">}</span>.mdi
+<span class="nv">$ </span>touch <span class="nb">test</span><span class="o">{</span>1,2,3<span class="o">}</span>.md
 <span class="nv">$ </span>touch test1.md test2.md test3.md
+
+<span class="c"># Date</span>
+<span class="c"># $ date +&lt;format&gt;</span>
+<span class="nv">$ </span>date +<span class="s2">&quot;%Y%m%d %H:%M %a(%b)&quot;</span>
+
+<span class="c"># NTP(Network Time Protocol)</span>
+<span class="nv">$ </span>ntpdate ntp.ring.gr.jp
 </pre></div>
         </article>
       </div>
