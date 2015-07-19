@@ -3,6 +3,9 @@
 ## About
 This repository introduces a basic concept and commands of Linux.
 
+- [Github](https://github.com/KENJU/lpic)
+- [Docs](http://kenju.github.io/lpic/)
+
 ## Linux main directory
 
 - boot  : necessarry file for start up system like Linux kernel
