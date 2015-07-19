@@ -791,7 +791,18 @@ $ dumpe2fs /dev/sda1
 # shows all device files
 $ ls /dev
 
+# add `&` at the end of the command line to run the command in the background
+$ find / -name "*node*" -type f > nodelog.log 2>&1 &
+
+# shows all jobs
+$ jobs
+
+# terminate jobs
+$ kill %1c
+
 ```
+
+### Device files
 
 As for the device files, have a look at below table for futher information.
 
@@ -804,12 +815,33 @@ As for the device files, have a look at below table for futher information.
 - ttysS* : serial ports
 - lp		 : printer device
 
+### Log files
+
+- `var/log/messages` : general log
+- `var/log/secure`   : log about authentication
+- `var/log/cron`     : log about cron
+- `var/log/maillog`  : log about maillog
+- `var/log/boot.log` : log about starting up system
+- `var/log/wtmp`     : log about user logging in
+- `var/log/lastlog`  : log about each user last logging in
+- `var/run/utmp`     : log about currently-logging-in user
+
+## Cron
+
 ## Useful tips
+
 
 ```bash
 # {}
 # the first command is equals with the second one
 $ touch test{1,2,3}.md
 $ touch test1.md test2.md test3.md
+
+# Date
+# $ date +<format>
+$ date +"%Y%m%d %H:%M %a(%b)"
+
+# NTP(Network Time Protocol)
+$ ntpdate ntp.ring.gr.jp
 
 ```
