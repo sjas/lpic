@@ -668,6 +668,64 @@ $ . sampleshell.sh      # this is the same with the above command
 	- `A -a B` : A and B are true
 	- `A -o B` : A or B is true
 
+#### if statement
+
+```bash
+
+# when the 1st parameter id directory,
+# return `ls -l`
+
+if [ -d $1 ]
+	then
+		ls -l $1
+	else
+		echo 'No such directory'
+fi
+
+```
+
+#### case statement
+
+```bash
+
+case $1 in
+	[ -d $1 ] )
+		echo "Is directory"
+		;;
+	[ -f $1 ] )
+		echo "Is file"
+		;;
+	*)
+		echo "Undefined"
+		;;
+esac
+
+```
+
+#### while statement
+
+```bash
+
+i=1
+while [ $i -le $1 ]
+do
+	echo $i
+	let i=i+1
+done
+
+```
+
+#### for statement
+
+```bash
+
+i=1
+for uid in Will Smith David
+	echo $i
+done
+
+```
+
 ### alias
 
 ```bash
