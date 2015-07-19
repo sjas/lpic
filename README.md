@@ -876,6 +876,66 @@ $ at -m
 
 ```
 
+## Network
+
+### Main Protocols
+
+Here are the main and basic protocol at least you should remember.
+
+- TCP  : Transimission Control Protocol
+- UDP  : User Datagram Protocol
+- ICMP : Internet Control Message Protocol
+- IP   : Internet Protocol
+- HTTP : HyperText Transfer Protocol
+- SSL  : Secure Socket Layer
+- SMTP : Simple Message Transfer Protocol
+- POP3 : Post Office Protocol
+- FTP  : File Transfer Protocol
+- DNS  : Domain Name Service
+- DHCP : Dynamic Host Configuration Protocol
+
+### Main Port Number
+
+- 20, 21 : FTP
+- 22     : SSH
+- 23     : TELNET
+- 25     : SMTP
+- 53     : DNS
+- 67     : DHCP
+- 80     : HTTP
+- 110    : POP3
+- 143    : IMAP4
+- 443    : HTTPS
+
+### Basic Commands
+
+```bash
+
+# checks whether there is connection or not
+$ ping -c 3 www.google.com
+
+# gets DNS info and IP addresses
+$ host www.google.com
+
+# shows all connection
+$ netstat
+$ netstat -a # shows all socket status
+$ netstat -n # shows without name resolution
+$ netstat -u # shows UDP
+$ netstat -p # shows process also
+$ netstat -m # shows statistics recoreded by the memory management routines
+
+# shows traceroute until host
+$ traceroute www.google.com
+
+# shows DNS server info
+$ cat /etc/resolv.conf
+
+# shows IP Addresses and Host name relationship
+$ cat /etc/hosts
+
+```
+
 ## Others
 
 ### Locale
