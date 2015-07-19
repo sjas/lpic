@@ -765,6 +765,45 @@ $ unset dlist
 
 ```
 
+## Package
+
+```bash
+
+# shows system architecture
+# return
+# 	- i386 / i686 : 32 bit binary package
+# 	- x86_64			: 64 bit binary package
+# 	- noarch			: architecture-independent package
+# 	- src 				: source package
+#
+$ arch
+
+
+```
+
+## File System/Device Files
+
+```bash
+
+# shows detailed info about Linux file system
+$ dumpe2fs /dev/sda1
+
+# shows all device files
+$ ls /dev
+
+```
+
+As for the device files, have a look at below table for futher information.
+
+- sda 	 : 1st disk device
+- sdb		 : 2nd disk device
+- sda* 	 : other disk device
+- scd*   : CD/DVD drive
+- tty*   : terminals
+- pts    : vertual terminals
+- ttysS* : serial ports
+- lp		 : printer device
+
 ## Useful tips
 
 ```bash
