@@ -1,5 +1,8 @@
 # Introduction
 
+## About
+This repository introduces a basic concept and commands of Linux.
+
 ## Linux main directory
 
 - boot  : necessarry file for start up system like Linux kernel
@@ -411,6 +414,67 @@ $ usermod -u 1000 david
 $ usermod -d /home/dev/ david
 
 ```
+
+## Permission
+
+### Owner (user/group)
+
+```bash
+
+# changes owner
+$ chown alice sample
+$ chown -R alice sample # changes all files in the directory
+
+# changes group
+$ chgrp develp tmp
+$ chgrop -R develop tmp
+
+# changes owner and group at the same time
+$ chown alice:develop tmp
+
+```
+
+### Accessible Types
+
+- Permission
+	- r: read(4)
+	- w: write(2)
+	- x: execute(1)
+- Target Segment
+	- owner
+	- group to which the owner belongs
+	- other users
+- Permission Counters
+	- 7 : 4 + 2 + 1 = r + w + x
+	- 5 : 4 + 0 + 1 = r + x
+	- 4 : 4 + 0 + 0 + r
+
+```bash
+
+$ touch sample.txt
+$ ls -l sample.txt
+-rw-r--r--  1 username  group  0  1 10 10:11 sample.txt
+# user   = can read and write
+# group  = can read only
+# others = can read only
+
+# changes permission of sample.txt
+$ chmod 755 sample.txt
+$ ls -l sample.txt
+-rwxr-xr-x  1 username  group  0  1 10 10:11 sample.txt
+
+# other options
+# - target	: u, g, o
+# - control	: +, -, =
+# - type		: r, w, x
+#
+$ chmod ug+rx sample.txt
+$ ls -l sample.txt
+-rwxr--r--  1 username  group  0  1 10 10:11 sample.txt
+
+
+```
+
 
 ## Useful tips
 
