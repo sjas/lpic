@@ -798,7 +798,7 @@ $ find / -name "*node*" -type f > nodelog.log 2>&1 &
 $ jobs
 
 # terminate jobs
-$ kill %1c
+$ kill %1
 
 ```
 
@@ -830,11 +830,81 @@ As for the device files, have a look at below table for futher information.
 
 ```bash
 
-
+$ crontab -e # edits crontab
+$ crontab -l # lists crontab
+$ crontab -r # remobes crontab
 
 ```
 
-## Useful tips
+When you run the above `$ crontab -e` command, an editor would be launched and now you can edit the cron file. Here is the basic grammer rules when writing cron.
+
+```bash
+
+# *general rule*
+# min hour day month DOW command
+
+# run `/usr/bin/updatedb`
+# everyday, at 4 am
+0 4 * * * /usr/bin/updatedb
+
+# run `/usr/bin/updatedb`
+# on every 15th of each month, 1am
+0 1 15 * * /usr/bin/updatedb
+
+# run `/user/bin/updatedb`
+# on every 5 minutes
+*/5 * * * * /usr/bin/updatedb
+
+```
+
+### `at`
+
+If you want to run not continuously but once, then user `at` command.
+
+```bash
+
+# lists all scheduled jobs
+$ at -l
+# or use this
+$ atq
+
+# deletes scheduled jobs with job number
+$ at -d <job number>
+
+# notify user by sending email when a job is done
+$ at -m
+
+```
+
+## Others
+
+### Locale
+
+```bash
+
+# shows local environment variables
+$ locale
+
+# shows timezone
+$ ls /usr/share/zoneinfo/
+
+# sets timezone
+$ export TZ='Asia/Tokyo'
+
+# sets timezone in command shell
+$ tzselect
+
+```
+
+About local environment variables
+- LANG        : all catetories
+- LC_MESSAGES : used for showing message
+- LC_TIME     : format of date/time
+- LC_MONETARY : format of currency
+- LC_NUMERIC  : format of number
+- LC_ALL      : all categories
+
+### Useful tips
 
 
 ```bash

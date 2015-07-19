@@ -1,4 +1,0 @@
-find: /.DocumentRevisions-V100: Permission denied
-find: /.fseventsd: Permission denied
-find: /.Spotlight-V100: Permission denied
-find: /.Trashes: Permission denied
