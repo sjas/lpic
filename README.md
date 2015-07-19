@@ -472,9 +472,119 @@ $ chmod ug+rx sample.txt
 $ ls -l sample.txt
 -rwxr--r--  1 username  group  0  1 10 10:11 sample.txt
 
+```
+
+### root
+
+```bash
+
+# changes user to root user
+$ su - # you need `-` option to use some restricted commands
+$ exit
 
 ```
 
+## Shell Script
+
+Here, we mainly use `bash` as an example.
+
+### Basic Usage
+
+```bash
+
+# shows all shells list which you can use
+$ cat /etc/shells
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+
+# shows PATH
+$ echo $PATH
+
+# `;`
+# commands would be continually executed
+$ git init; git add -A; git commit -m "first commit"
+
+# `&&`
+# means "AND"
+$ touch README.md && git add README.md
+
+# `||`
+# means "OR"
+$ cd /tmp || echo "there is no such directory"
+
+# shows executed commands history
+$ history
+$ history -c 			# deletes history
+$ history 5  			# shows the 5 latest history
+$ echo $HISTSIZE 	# shows the size of saved history
+$ !cat 						# executes the latest command begin with `cat`
+$ !732   					# executes the history with the number
+$ !! 							# executes the last command in history
+$ !-3 						# executes the 3 before command in history
+$ ^cat^ls         # executes the latest command, after replacing `ls` command with `cat`
+
+```
+
+### Keyboard Shortcuts
+
+There are some userful keyboard shortcut in bash.
+
+- `tab`      : complement commands or paths
+- `ctrl + a` : move cursor to the head of the line
+- `ctrl + e` : move cursor to the end of the line
+- `crll + l` : clear display
+- `ctrl + c` : stop currently executing process
+- `ctrl + s` : stop showing result onto the display
+- `ctrl + q` : restart showing result onto the display
+- `ctrl + z` : stop currently executing process temporarily
+- `ctrl + d` : log out
+- `ctrl + r` : starts incremental search (commands history)
+
+### Shell Variables
+
+
+```bash
+
+# history
+$ echo $HISTFILE
+$ echo $HISTFILESIZE
+$ echo $HISTSIZE
+
+# home directory path
+$ echo $HOME
+
+# hostname
+$ echo $HOSTNAME
+
+# language
+$ echo $LANG
+
+# command search path
+$ echo $PATH
+
+# prompt string
+# @see http://www.unix.com/shell-programming-and-scripting/131510-need-explanation-ps1-ps2-ps3-ps4.html
+$ echo $PS1
+$ echo $PS2 # subshell prompt string, by default ">"
+
+# current directory path
+$ echo $PWD
+
+# current shell
+$ echo $SHELL
+
+# terminal type
+$ echo $TERM
+
+# user
+$ echo $UID
+$ echo $USER
+
+```
 
 ## Useful tips
 
