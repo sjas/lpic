@@ -619,12 +619,100 @@ $ export VAR=Ubuntu
 
 ```
 
+## Shell Script
+
+### Basic Usage
+
+```bash
+
+# executes shell script
+$ source sampleshell.sh
+$ . sampleshell.sh      # this is the same with the above command
+
+
+```
+
+### Basic Syntax
+
+#### Parameters
+
+- $# : the number of parameters
+- $@ : all parameters
+- $1 : 1st parameter
+- $2 : 2nd parameter
+- $3 : 3rd parameter...
+
+#### Condition Expression
+
+- Filetype ( return true when... )
+	- `-e` : file exists
+	- `-f` : file type is `file` (not directory, etc)
+	- `-d` : file type is 'directory'
+	- `-r` : file exists and is readable
+	- `-w` : file exists and is writable
+	- `-x` : file exists and is executable
+	- `-L` : is symbolic link
+- Number ( return true when... )
+	- `A -eq B` : A equals with B
+	- `A -ge B` : A is greater/equal than/with B
+	- `A -gt B` : A is greater then B
+	- `A -le B` : A is less/equal than/with B
+	- `A -lt B` : A is less than B
+	- `A -ne B` : A does not equal with B
+- String ( return true when... )
+	- `-z A`   : the size of A is 0
+	- `A = B`  : A equals with B
+	- `A != B` : A does not equal with B
+- Boolean (return trueh when... )
+	- `! A`    : A is false
+	- `A -a B` : A and B are true
+	- `A -o B` : A or B is true
+
+### alias
+
+```bash
+
+# lists all defined alias
+$ alias
+
+# sets new alias
+$ alias la='ln -la'
+
+# uses new defined alias
+$ la
+
+# unset alias
+$ unalias la
+
+```
+
+### function
+
+```bash
+
+# lists all declared function
+
+# you need space before and after `{}` blanckets
+# $N means arguments
+$ function dlist() { ls -l $1 | grep '^d'; }
+
+# uses defines function like below
+$ dlist /
+
+# above is the same with below command
+$ ls -l / | grep '^d'
+
+# unset defined function
+$ unset dlist
+
+```
+
 ## Useful tips
 
 ```bash
 # {}
 # the first command is equals with the second one
-$ touch test{1,2,3}.mdi
+$ touch test{1,2,3}.md
 $ touch test1.md test2.md test3.md
 
 ```
